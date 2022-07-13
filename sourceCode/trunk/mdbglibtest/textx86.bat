@@ -1,0 +1,1 @@
+D:\svn\mdbglib\trunk\mdbglibtest\bin\x86\Debug\mdbglibtest.exe "$opendump d:\temp\notepaddump.dmp" ".sympath SRV*D:\Temp\Symbols*http://msdl.microsoft.com/download/symbols" "~* kc"

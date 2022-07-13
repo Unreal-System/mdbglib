@@ -1,0 +1,20 @@
+<div class="wikidoc">Abandoned, please contact mogoreanu~@tt~gmail.com if you&#39;re interested to take over the work<br /><br />mdbglib is a managed library for interacting with Debugger Engine API (dbgeng.dll), which is supplied by Microsoft as part of Debugging Tools for Windows.<br /><br />mdbglib will help you if you need to:
+<ol><li>Learn how to use Debugger Engine API from managed code (mostly C#)</li>
+<li>Extract information from a dump</li>
+<li>Extract information from the memory of a running application</li>
+<li>Modify virtual memory of a running application</li>
+<li>Write Powershell scripts to interact with a Debugger engine</li>
+<li>(possibly somewhere in the future) write your own debugger.</li></ol>
+<br />mdbglib provides both a thin and a thick wrapper around Debugger Engine API. 
+<ol><li>The thin wrapper gives access to Debugger Engine API from managed code doing the required type conversions. It is easier to use for people familiar with Debugger Engine API or for people who want to achieve some custom, advanced behavior</li>
+<li>The thick wrapper tends to provide more .NET like, object oriented, experience in working with Debugger Engine API. It hides calls to the undelying API and provides easy to use objects such as DbgThread, DbgFrame, DbgModule, DbgObject, DbgType, ... Think about the think wrapper compared to dbgeng API as of Windows Forms compared to Win32</li></ol>
+<br />Please see the code examples inside mdbglibtest folder for a quick intro.<br /><br />Foders description:
+<ol><li>ASDumpAnalyzer - the project that this library was first intended for. It is used to exctract queries from Microsoft SQL Server Analysis Services crash dumps</li>
+<li>dbgengtest - a native project that mimics the functions implemented inside mdbglibtest using direct access to Debugger Engine API. Its reason is to show the difference</li>
+<li>Docs - some useful links</li>
+<li>dumps - the dumps and applications that were created for unit tests</li>
+<li>mdbglib - the actual project. It is written in C++<u>/CLI (managed C</u>++) </li>
+<li>mdbglib_cs - an early version of the library that used to reference mdbgeng.dll - the managed wrapper around dbgeng.dll which is not yet publicly available</li>
+<li>mdbglibtest - unit tests for mdbglib, examples of different types of operations that can be performed using mdbglib</li>
+<li>PowerShellScripts - examples of PowerShell scripts that execute tasks using mdbglib</li></ol>
+<br />There is ongoing work on a readme and FAQ files, meanwhile post your questions/suggestions here. The project is in &quot;work in progress&quot; stage so any requests are welcome.<br /><br />The best way to get the latest version is to check out the latest version from: https://mdbglib.svn.codeplex.com/svn/trunk<br /><br />Comments and suggestions are welcome.<br /><br />So, lets debug,<br />Nicolae Mogoreanu</div><div class="ClearBoth"></div>

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "479220",
+    "ThreadId": "223241",
+    "Html": "<p>First, thank you for this great library. I just had a quick question, and I am hoping that somebody could help me out. I am current trying to use the MS Symbol Server with the library when getting the stack trace of a dump, however the symbols do not seem to be loading correctly, where as I am able to pass the exact same parameters as command line arguments in WinDbg, and I get the expected stack. Does anyone know of how one would accomplish this? I have tried with the following:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">string</span> dumpLocation = <span style=\"color:#a31515\">@&quot;C:\\MyCrash.dmp&quot;</span>;<br><span style=\"color:blue\">string</span> symbols = <span style=\"color:#a31515\">@&quot;SRV*C:\\websymbols*http://msdl.microsoft.com/download/symbols;&quot;</span>;<br>symbols + = <span style=\"color:#a31515\">@&quot;C:\\MyProject\\MyPDBFiles&quot;</span>;<br><span style=\"color:blue\">string</span> images = <span style=\"color:#a31515\">@&quot;C:\\MyProject\\Bin&quot;</span>;<br>Debuggee dbgObj = Debuggee.OpenDumpFile(dumpLocation, symbols);<br>dbgObj.ImagePath = images;<br>DbgFrame[] f2 = dbgObj.GetEventStackTrace();<br><span style=\"color:green\">// More code }} </span>\r\n</pre>\r\n</div>\r\n<p><br>Thank you in advance for any direction, <br>Dennis</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-11T10:20:00.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "508362",
+    "ThreadId": "223241",
+    "Html": "<p>Sorry for the delay, I've experienced the same problem that you're describing, but for me it was not essential enough so that I spend time to fix it. Now as someone else needed it I've fixed the problem in my today's checkin. The only thing that prevented it from working was the absence &nbsp;of the right symsrv.dll</p>\r\n<p>Besides other things the latest checkin updates the Debugging Tools for Windows libraries and migrates to Visual Studio 2010.</p>",
+    "PostedDate": "2010-10-16T19:43:12.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "508831",
+    "ThreadId": "223241",
+    "Html": "<p>Thank you for the update. I changed machines and that ended-up fixing the problem, but I did not know why, and like you, it did not warrant more time investigating. However, I will update to the new code.</p>\r\n<p>Thanks again for all the work that you have put into this.</p>",
+    "PostedDate": "2010-10-18T07:58:23.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

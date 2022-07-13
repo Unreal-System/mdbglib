@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "509123",
+    "ThreadId": "231407",
+    "Html": "<p>At the moment mdbglib satisfies the requirements we have for automatic dump analysis this is why there are no major features planned.</p>\r\n<p>If your project plans to use mdbglib please feel free to post here and I'll do my best to analyze the problem and implement or at least suggest how to implement it. I want to keep the project alive.</p>",
+    "PostedDate": "2010-10-18T20:22:33.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "561437",
+    "ThreadId": "231407",
+    "Html": "\r\n<p>I know this is a good library when we look around for an easy way to automate memory dumps...</p>\r\n<p>I ended up spending my 2 years of personal time to build something of my own... You might interested as well.</p>\r\n<p><a href=\"http://www.debuganalyzer.net\">http://www.debuganalyzer.net</a></p>\r\n",
+    "PostedDate": "2011-02-06T04:31:08.017-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

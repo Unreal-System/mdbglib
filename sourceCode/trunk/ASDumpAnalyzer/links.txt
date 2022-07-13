@@ -1,0 +1,1 @@
+http://blogs.msdn.com/joshpoley/archive/2008/06/02/getting-the-stack-from-a-dmp-file-automating-crash-dump-analysis-part-2.aspx

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A045AEEB-F851-4B8E-AC50-89C8A71A001A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mdbglib</RootNamespace>
+    <AssemblyName>mdbglib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mdbgeng, Version=6.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\x86\mdbgeng.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbgAccessViolationException.cs" />
+    <Compile Include="DbgObject.cs" />
+    <Compile Include="DbgType.cs" />
+    <Compile Include="DebuggeeInfo.cs" />
+    <Compile Include="Debuggee.cs" />
+    <Compile Include="DbgFrame.cs" />
+    <Compile Include="DbgModule.cs" />
+    <Compile Include="DbgArgument.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DbgThread.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\x64\dbgeng.dll" />
+    <Content Include="dll\x64\dbghelp.dll" />
+    <Content Include="dll\x64\mdbgeng.dll" />
+    <Content Include="dll\x64\winext\ext.dll" />
+    <Content Include="dll\x64\winext\kext.dll" />
+    <Content Include="dll\x64\winext\logexts.dll" />
+    <Content Include="dll\x64\winext\uext.dll" />
+    <Content Include="dll\x64\winext\wdfkd.dll" />
+    <Content Include="dll\x86\dbgeng.dll" />
+    <Content Include="dll\x86\dbghelp.dll" />
+    <Content Include="dll\x86\mdbgeng.dll" />
+    <Content Include="dll\x86\winext\ext.dll" />
+    <Content Include="dll\x86\winext\kext.dll" />
+    <Content Include="dll\x86\winext\logexts.dll" />
+    <Content Include="dll\x86\winext\uext.dll" />
+    <Content Include="dll\x86\winext\wdfkd.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>IF NOT EXIST "$(TargetDir)dbgeng.dll" xcopy "$(ProjectDir)dll\$(PlatformName)\dbgeng.dll" "$(TargetDir)" /Y
+IF NOT EXIST "$(TargetDir)dbghelp.dll" xcopy "$(ProjectDir)dll\$(PlatformName)\dbghelp.dll" "$(TargetDir)" /Y
+IF NOT EXIST "$(TargetDir)mdbgeng.dll" xcopy "$(ProjectDir)dll\$(PlatformName)\mdbgeng.dll" "$(TargetDir)" /Y
+IF NOT EXIST "$(TargetDir)winext\" mkdir "$(TargetDir)winext\"
+IF NOT EXIST "$(TargetDir)winext\ext.dll" xcopy "$(ProjectDir)dll\$(PlatformName)\winext\ext.dll" "$(TargetDir)winext\" /Y
+IF NOT EXIST "$(TargetDir)winext\kext.dll" xcopy "$(ProjectDir)dll\$(PlatformName)\winext\kext.dll" "$(TargetDir)winext\" /Y
+IF NOT EXIST "$(TargetDir)winext\logexts.dll" xcopy "$(ProjectDir)dll\$(PlatformName)\winext\logexts.dll" "$(TargetDir)winext\" /Y
+IF NOT EXIST "$(TargetDir)winext\uext.dll" xcopy "$(ProjectDir)dll\$(PlatformName)\winext\uext.dll" "$(TargetDir)winext\" /Y
+IF NOT EXIST "$(TargetDir)winext\wdfkd.dll" xcopy "$(ProjectDir)dll\$(PlatformName)\winext\wdfkd.dll" "$(TargetDir)winext\" /Y
+
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
